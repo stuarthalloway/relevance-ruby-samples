@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 21) do
+ActiveRecord::Schema.define(:version => 22) do
 
   create_table "bank_accounts", :force => true do |t|
     t.string   "owner"
@@ -77,6 +77,18 @@ ActiveRecord::Schema.define(:version => 21) do
     t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "hrMEM002", :primary_key => "memID", :force => true do |t|
+    t.string  "memFN",  :limit => 50
+    t.string  "memLN",  :limit => 50
+    t.integer "memSSN", :limit => 9
+  end
+
+  create_table "hrPOL001", :primary_key => "polID", :force => true do |t|
+    t.string  "polTYPE",   :limit => 50
+    t.string  "polNUMBER", :limit => 50
+    t.integer "polHOLDER"
   end
 
   create_table "movies", :force => true do |t|
