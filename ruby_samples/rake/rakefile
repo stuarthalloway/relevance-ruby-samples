@@ -1,0 +1,46 @@
+# codecite default
+task :default => ['test:units']
+
+# codecite test
+namespace :test do
+end
+# codecite test
+
+# codecite unit
+require 'rake/testtask'
+namespace :test do
+  Rake::TestTask.new(:units) do |t|
+    t.pattern = 'test/**/*_test.rb'
+    t.verbose = true
+  end
+  Rake::Task['test:units'].comment = "Run the unit tests in test"
+end
+# codecite unit
+
+# codecite doc
+namespace :doc do
+end
+# codecite doc
+
+# codecite rdoc
+require 'rake/rdoctask' 
+namespace :doc do
+  desc "Generate documentation for the labs"
+  Rake::RDocTask.new("labs") do |rdoc|
+    rdoc.rdoc_dir = 'doc'
+    rdoc.title    = "Lab Documentation"
+    rdoc.options << '--line-numbers' << '--inline-source'
+    rdoc.rdoc_files.include('**/*.rb')
+  end
+end
+# codecite rdoc
+
+# inspired by http://nubyonrails.com/articles/2006/07/28/foscon-and-living-dangerously-with-rake
+rule ".t" do |t|
+  if /(.*)\.([^.]+)\.t$/.match(t.name)
+    file_name = "test/#{$1}_test.rb"
+    test_name = "test_#{$2}"
+    raise "No file found for #{file_name}" unless File.exist?(file_name)
+    sh "ruby #{file_name} -n #{test_name}"
+  end
+end

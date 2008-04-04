@@ -1,0 +1,22 @@
+<h1>Listing widgets</h1>
+
+<div id="list"> 
+  <%= render :partial => 'search' %> 
+</div>
+
+<form>
+  <p>
+    <label for="search">Search</label>:<br />
+    <%= text_field_tag :search, params[:search] %>
+  </p>
+  <p>
+    <%= submit_tag "Search" %>
+  </p>
+</form>
+
+<%= observe_field  :search,
+                   :frequency => 0.5,
+                   :update => 'list',
+                   :with=>"'search=' + encodeURIComponent(value)",
+                   :url=>{:action=>'search'} %>
+

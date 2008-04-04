@@ -1,0 +1,12 @@
+small_investment:
+  id: 1
+  owner: Jane
+  owner_ssn: 111111111
+  balance: 1000
+  risk_level: High
+large_investment:
+  id: 2
+  owner: Joe
+  owner_ssn: 222222222
+  balance: 14000
+  risk_level: Medium

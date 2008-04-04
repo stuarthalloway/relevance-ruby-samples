@@ -1,0 +1,24 @@
+<h1>New contact</h1>
+
+<%= error_messages_for :contact %>
+
+# codecite simple_form
+<% form_for(@contact) do |f| %>
+  <%# codecite new %>
+  <p>
+    <label>First Name:</label>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <label>Last Name:</label>
+    <%= f.text_field :last_name %>
+  </p>
+  <%# codecite new %>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+# codecite simple_form
+
+<%= link_to 'Back', contacts_path %>

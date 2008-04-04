@@ -1,0 +1,6 @@
+<ol id="movie_list">
+  <% @movies.each do |movie| %>
+  <%# codecite dom_id %>
+  <li id="<%= dom_id(movie) %>"><%= movie.year %>: <%= movie.title %></li>
+  <% end %>
+</ol>

@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: smurf
+  color: blue
+  weight: 50
+  created_at: 2007-11-27 09:32:53
+  updated_at: 2007-11-27 09:32:53
+two:
+  id: 2
+  created_at: 2007-11-27 09:32:53
+  updated_at: 2007-11-27 09:32:53

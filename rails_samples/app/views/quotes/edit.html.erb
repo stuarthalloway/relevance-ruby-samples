@@ -1,0 +1,12 @@
+<h1>Editing quote</h1>
+
+<%= error_messages_for :quote %>
+
+<% form_for(@quote) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @quote %> |
+<%= link_to 'Back', quotes_path %>

@@ -1,0 +1,5 @@
+<ol id="movie_list">
+  <% @movies.each do |movie| %>
+  <li><%= movie.year %>: <%= movie.title %></li>
+  <% end %>
+</ol>

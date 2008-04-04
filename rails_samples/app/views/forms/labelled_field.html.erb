@@ -1,0 +1,13 @@
+<h1>Editing post</h1>
+
+<%= error_messages_for :post %>
+
+<% form_for(@post) do |f| %>
+  <%= f.labelled_field :text_field, :title %>
+  <%= f.labelled_field :text_area, :body %>
+  <%= f.labelled_field :check_box, :published %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

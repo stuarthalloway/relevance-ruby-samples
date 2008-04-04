@@ -1,0 +1,14 @@
+<%# codecite show%>
+<p>
+  <b>First Name:</b>
+  <%=h @contact.first_name %>
+</p>
+
+<p>
+  <b>Last Name:</b>
+  <%=h @contact.last_name %>
+</p>
+<%# codecite show%>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

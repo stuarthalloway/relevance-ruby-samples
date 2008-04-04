@@ -1,0 +1,85 @@
+require 'rake'
+require 'rake/testtask'
+require 'rake/rdoctask'
+require 'rake/gempackagetask'
+
+desc 'Default: run unit tests.'
+task :default => :test
+
+desc 'Default for CruiseControl'
+task :cruise => ['test', 'test:flog']
+
+desc 'Test for flog failure'
+namespace :test do
+  task :flog do
+    threshold = (ENV['FLOG_THRESHOLD'] || 120).to_i
+    result = IO.popen('flog . 2>/dev/null | grep "(" | grep -v "main#none" | grep -v "AccountController#login" | head -n 1').readlines.join('')
+    result =~ /\((.*)\)/
+    flog = $1.to_i
+    result =~ /^(.*):/
+    method = $1
+    if flog > threshold
+      raise "FLOG failed for #{method} with score of #{flog} (threshold is #{threshold})."
+    end  
+    puts "FLOG passed, with highest score being #{flog} for #{method}."
+  end
+end
+
+desc 'Test the relevance_tools plugin.'
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'lib'
+  t.libs << 'test/fixtures'
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = true
+end
+
+namespace 'test' do
+  desc 'Build the MySQL test databases'
+  task :build_mysql_databases do 
+    %x( mysqladmin -u root create relevance_tools_unittest )
+    # %x( mysql -u root -e "grant all on relevance_tools_unittest.* to root@localhost" )
+    %x( mysql -u root relevance_tools_unittest < 'test/db/mysql.sql' )
+  end
+
+  desc 'Drop the MySQL test databases'
+  task :drop_mysql_databases do 
+    %x( mysqladmin -u root -f drop relevance_tools_unittest )
+  end
+
+  desc 'Rebuild the MySQL test databases'
+  task :rebuild_mysql_databases => ['test:drop_mysql_databases', 'test:build_mysql_databases']
+end
+
+desc 'Generate documentation for the relevance_tools plugin.'
+Rake::RDocTask.new(:rdoc) do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = 'RelevanceTools'
+  rdoc.options << '--line-numbers' << '--inline-source'
+  rdoc.rdoc_files.include('README')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+spec = Gem::Specification.new do |s|
+  s.name = 'relevance_tools'
+  s.version = "0.0.1"
+  s.platform = Gem::Platform::RUBY
+  s.summary = "Relevance Agile Development Tools"
+  s.files = Dir.glob("./**/*").delete_if {|item| item.include?("SVN") || item.include?(".gem")}
+  s.require_path = 'lib'
+  s.author = "Relevance"
+  s.email = "stu@relevancellc.com"
+  s.homepage = "http://www.relevancellc.com"
+end
+
+Rake::GemPackageTask.new(spec) do |p|
+    p.gem_spec = spec
+    p.need_tar = true
+end
+
+desc 'Build and install the gem'
+task :install do
+    sh %{rake package}
+    sh %{sudo gem install pkg/#{spec.name}-#{spec.version}}
+end
+
+

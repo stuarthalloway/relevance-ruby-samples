@@ -1,0 +1,8 @@
+<!-- codecite template -->
+<h1>Changes for <%= @document.name %></h1>
+<ul>
+  <% for change in @changes %>
+    <li><%= change.name %>: <%= change.description %> (by <%= change.author%> at <%= change.created_at %>)
+  <% end %>
+</ul>
+<!-- codecite template -->

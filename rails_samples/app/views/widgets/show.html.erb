@@ -1,0 +1,11 @@
+<h1>Widget <%= @widget.name %></h1>
+
+<dl>
+  <dt>Weight</dt>
+  <dd><%= @widget.weight %></dd>
+  <dt>Color</dt>
+  <dd><%= @widget.color %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_widget_path(@widget) %> |
+<%= link_to 'Back', widgets_path %>

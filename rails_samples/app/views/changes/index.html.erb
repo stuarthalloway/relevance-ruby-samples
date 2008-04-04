@@ -1,0 +1,18 @@
+<h1>Listing changes</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for change in @changes %>
+  <tr>
+    <td><%= link_to 'Show', change %></td>
+    <td><%= link_to 'Edit', edit_change_path(change) %></td>
+    <td><%= link_to 'Destroy', change, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New change', new_change_path %>

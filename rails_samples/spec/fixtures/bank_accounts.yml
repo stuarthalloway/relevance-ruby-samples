@@ -1,0 +1,30 @@
+# codecite fixtures
+small_checking:
+  id: 1
+  owner: Joe
+  balance: 1000
+large_checking:
+  id: 2
+  owner: Jane
+  balance: 20000
+# codecite fixtures
+# codecite sti
+actual_checking:
+  id: 3
+  owner: Bill
+  balance: 1500
+  type: CheckingAccount
+actual_savings:
+  id: 4
+  owner: Mary
+  balance: 4000
+  rate: 3.5
+  type: SavingsAccount
+actual_savings_2:
+  id: 5
+  owner: Bob
+  balance: 3500
+  rate: 4.25
+  type: SavingsAccount
+# codecite sti
+  

@@ -1,0 +1,14 @@
+jabberwock:
+  id: 1
+  title: Jabberwock
+  body: Twas brillig, and the slithy...
+  published: true
+  created_at: 2007-10-21 08:14:40
+  updated_at: 2007-10-21 08:14:40
+two:
+  id: 2
+  title: MyString
+  body: MyText
+  published: false
+  created_at: 2007-10-21 08:14:40
+  updated_at: 2007-10-21 08:14:40

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# codecite fixtures
+one:
+  id: 1
+  name: First document
+  author: Justin
+  created_at: 2007-10-31 12:12:06
+  updated_at: 2007-10-31 12:12:06
+two:
+  id: 2
+  name: Second document
+  author: Stu
+  created_at: 2007-10-31 12:12:06
+  updated_at: 2007-10-31 12:12:06
+# codecite fixtures

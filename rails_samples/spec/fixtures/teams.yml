@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# codecite fixtures
+redsox:
+  id: 1
+  name: Red Sox
+  city: Boston
+  created_at: 2007-10-23 11:28:33
+  updated_at: 2007-10-23 11:28:33
+yankees:
+  id: 2
+  name: Yankees
+  city: New York
+  created_at: 2007-10-23 11:28:33
+  updated_at: 2007-10-23 11:28:33
+
+# codecite fixtures
+
+# codecite many
+<% (3..200).each do |i| %>
+team_<%= i %>:
+  id: <%= i %>
+  name: Team <%= i %>
+  City: Random
+  created_at: <%= Time.now.iso8601 %>
+  updated_at: <%= Time.now.iso8601 %>
+<% end %>
+# codecite many

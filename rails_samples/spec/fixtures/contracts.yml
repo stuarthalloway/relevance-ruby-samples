@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# codecite totally random
+<% (1..100).each do |i| %>
+contract_<%= i %>:
+  id: <%= i %>
+  salary: <%= rand(5000000) %>
+  length: <%= rand(5) %>
+  player_id: <%= rand(200) %>
+  team_id: <%= rand(200) %>
+  created_at: <%= Time.now.iso8601 %>
+  updated_at: <%= Time.now.iso8601 %>
+<% end %>
+# codecite totally random
+# codecite large teams
+<% (101..200).each do |i| %>
+contract_<%= i %>:
+  id: <%= i %>
+  salary: <%= rand(5000000) %>
+  length: <%= rand(5) %>
+  player_id: <%= rand(200) %>
+  team_id: <%= rand(2) + 1 %>
+  created_at: <%= Time.now.iso8601 %>
+  updated_at: <%= Time.now.iso8601 %>
+<% end %>
+# codecite large teams

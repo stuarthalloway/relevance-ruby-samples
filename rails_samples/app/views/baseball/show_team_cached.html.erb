@@ -1,0 +1,11 @@
+<!-- codecite cached -->
+<h1>Showing a Team</h1>
+<% cache do %>
+  <h2><%= @team.name %></h2>
+  <ul>
+    <% @team.players.each do |player| %>
+      <li><%= player.name %></li>
+    <% end %>
+  </ul>
+<% end %>
+<!-- codecite cached -->

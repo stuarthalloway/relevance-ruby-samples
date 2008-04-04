@@ -1,0 +1,12 @@
+jruby:
+  id: 1
+  created_at: 2007-10-31 13:40:14
+  updated_at: 2007-10-31 13:40:14
+  body: JRuby has the elegance of Java, and the speed of Ruby
+  source: Justin Gehtland
+pairing:
+  id: 2
+  created_at: 2007-10-31 13:40:14
+  updated_at: 2007-10-31 13:40:14
+  body: I'm pairing with 130 people. That's promiscuous programming.
+  source: Dave Thomas

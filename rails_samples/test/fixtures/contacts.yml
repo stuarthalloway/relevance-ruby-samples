@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+gabe:
+  id: 1
+  created_at: 2007-11-03 10:58:55
+  updated_at: 2007-11-03 10:58:55
+  first_name: Gabriel
+  last_name: Gehtland
+justin:
+  id: 2
+  created_at: 2007-11-03 10:58:55
+  updated_at: 2007-11-03 10:58:55
+  first_name: Justin
+  last_name: Gehtland

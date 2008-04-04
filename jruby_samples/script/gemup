@@ -1,0 +1,13 @@
+jruby -S gem install -y rake
+jruby -S gem install -y rails
+jruby -S gem install -y ActiveRecord-JDBC
+jruby -S gem install -y BlueCloth
+jruby -S gem install -y RedCloth
+jruby -S gem install -y facets
+jruby -S gem install -y mongrel
+jruby -S gem install -y mongrel_jcluster
+jruby -S gem install -y rspec
+
+
+
+

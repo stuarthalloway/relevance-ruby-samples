@@ -1,0 +1,21 @@
+<% form_for(:user) do %>
+
+  <p><label for="user_name">What is your name?</label><br/>
+  <%= text_field 'user', 'name'  %></p>
+
+  <p>
+    <label for="user_favorite_color">
+      What is your favorite color?
+    </label>
+    <br/>
+    <%= text_field 'user', 'favorite_color'  %>
+  </p>
+  <div class="auto_complete" 
+       id="user_favorite_color_auto_complete">
+  </div>
+  <%= auto_complete_field :user_favorite_color, 
+        :url=>{:action=>'autocomplete_favorite_color'} %>
+  <%= submit_tag 'Save' %>
+<% end %>
+
+

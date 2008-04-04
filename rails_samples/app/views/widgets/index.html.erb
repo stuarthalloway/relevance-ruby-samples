@@ -1,0 +1,49 @@
+<h1>Listing widgets</h1>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Weight</td>
+    <td>Color</td>
+  </tr>
+
+<%#codecite list %>
+<% for widget in @widgets %>
+  <tr>
+    <td><%= widget.name %></td>
+    <td><%= widget.weight %></td>
+    <td><%= widget.color %></td>
+    <td><%= link_to 'Show', widget %></td>
+    <td><%= link_to 'Edit', edit_widget_path(widget) %></td>
+    <td><%= link_to 'Destroy', widget, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<%#codecite list %>
+</table>
+
+<hr/>
+
+<%#codecite count %>
+<% unless params[:search].blank? %>
+<%= @widgets.size %> widgets found.
+<% end %>
+<%#codecite count %>
+<%#codecite search %>
+<form>
+  <p>
+    <label for="search">Search</label>:<br />
+    <%= text_field_tag :search, params[:search] %>
+  </p>
+  <p>
+    <%= submit_tag "Search" %>
+  </p>
+</form>
+<%#codecite search %>
+
+<br />
+
+<%= link_to 'New widget', new_widget_path %>
+<hr/>
+<%#codecite logout %>
+<%= link_to 'Logout', :action => "logout" %>
+<%#codecite logout %>

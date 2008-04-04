@@ -1,0 +1,21 @@
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>Weight</td>
+      <td>Color</td>
+    </tr>
+
+  <% for widget in @widgets %>
+    <tr>
+      <td><%= widget.name %></td>
+      <td><%= widget.weight %></td>
+      <td><%= widget.color %></td>
+      <td><%= link_to 'Show', widget %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <hr/>
+  <% unless params[:search].blank? %>
+  <%= @widgets.size %> widgets found.
+  <% end %>

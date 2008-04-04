@@ -1,0 +1,12 @@
+<h1>Editing widget</h1>
+
+<%= error_messages_for :widget %>
+
+<% form_for(@widget) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @widget %> |
+<%= link_to 'Back', widgets_path %>

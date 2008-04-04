@@ -1,0 +1,12 @@
+<h1>Editing change</h1>
+
+<%= error_messages_for :change %>
+
+<% form_for(@change) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @change %> |
+<%= link_to 'Back', changes_path %>

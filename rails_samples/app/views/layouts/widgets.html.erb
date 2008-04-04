@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+<head> 
+<title>YUI Grids CSS </title> 
+  <link rel="stylesheet" type="text/css" href="stylesheets/reset-fonts-grids.css"> 
+</head> 
+<body> 
+<div id="doc" class="yui-t4">
+  <%# codecite header %>
+  <div id="hd"><%= render :partial => 'shared/header' %></div>
+  <div id="bd">
+    <div id="yui-main">
+      <%# codecite body %>
+      <div class="yui-b"><%= yield %></div>
+    </div>
+    <%# codecite header %>
+    <div class="yui-b"><%= render :partial => 'shared/sidebar' %></div>
+  </div>
+  <%# codecite footer %>
+  <div id="ft"><%= render :partial => 'shared/footer' %></div>
+</div>
+</body> 
+</html>

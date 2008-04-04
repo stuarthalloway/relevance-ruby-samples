@@ -1,0 +1,24 @@
+<h1>Listing quotes</h1>
+
+<%# codecite index %>
+<table>
+  <tr>
+    <td>Quote</td>
+    <td>Source</td>
+  </tr>
+
+<% for quote in @quotes %>
+  <tr>
+    <td><%= quote.body %></td>
+    <td><%= quote.source %></td>
+    <%# codecite index %>
+    <td><%= link_to 'Show', quote %></td>
+    <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+    <td><%= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New quote', new_quote_path %>

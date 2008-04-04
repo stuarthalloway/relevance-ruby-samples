@@ -1,0 +1,38 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# codecite fixtures
+manny:
+  id: 1
+  name: Manny Ramirez
+  position: Outfield
+  created_at: 2007-10-23 11:28:28
+  updated_at: 2007-10-23 11:28:28
+beckett:
+  id: 2
+  name: Josh Beckett
+  position: Pitcher
+  created_at: 2007-10-23 11:28:28
+  updated_at: 2007-10-23 11:28:28
+arod:
+  id: 3
+  name: Alex Rodriguez
+  position: Infield
+  created_at: 2007-10-23 11:28:28
+  updated_at: 2007-10-23 11:28:28
+jeter:
+  id: 4
+  name: Derek Jeter
+  position: Infield
+  created_at: 2007-10-23 11:28:28
+  updated_at: 2007-10-23 11:28:28
+    
+# codecite fixtures
+# codecite many
+<% (5..200).each do |i| %>
+player_<%= i %>:
+  id: <%= i %>
+  name: Player <%= i %>
+  position: Random
+  created_at: <%= Time.now.iso8601 %>
+  updated_at: <%= Time.now.iso8601 %>
+<% end %>
+# codecite many

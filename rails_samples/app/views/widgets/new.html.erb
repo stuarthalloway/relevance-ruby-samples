@@ -1,0 +1,23 @@
+<h1>New widget</h1>
+
+<%= error_messages_for :widget %>
+
+<% form_for(@widget) do |f| %>
+  <p>
+    <label for="widget[name]">Name</label>:<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <label for="widget[weight]">Weight</label>:<br />
+    <%= f.text_field :weight %>
+  </p>
+  <p>
+    <label for="widget[color]">Color</label>:<br />
+    <%= f.text_field :color %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', widgets_path %>
