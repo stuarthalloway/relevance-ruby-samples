@@ -1,0 +1,88 @@
+# codecite nocache
+Processing BaseballController#show_team_cached (for 127.0.0.1 at 2007-10-26 13:47:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"show_team_cached", "id"=>"1", "controller"=>"baseball"}
+  [4;36;1mTeam Columns (0.001908)[0m   [0;1mSHOW FIELDS FROM teams[0m
+  [4;35;1mTeam Load (0.000653)[0m   [0mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+Rendering baseball/show_team_cached
+  [4;36;1mPlayer Load (0.000659)[0m   [0;1mSELECT players.* FROM players INNER JOIN contracts ON players.id = contracts.player_id WHERE ((contracts.team_id = 1)) [0m
+  [4;35;1mPlayer Columns (0.001318)[0m   [0mSHOW FIELDS FROM players[0m
+Completed in 0.01918 (52 reqs/sec) | Rendering: 0.00911 (47%) | DB: 0.00454 (23%) | 200 OK [http://localhost/baseball/show_team_cached/1]
+
+
+Processing BaseballController#show_team_cached (for 127.0.0.1 at 2007-10-26 13:47:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"show_team_cached", "id"=>"1", "controller"=>"baseball"}
+  [4;36;1mTeam Columns (0.002220)[0m   [0;1mSHOW FIELDS FROM teams[0m
+  [4;35;1mTeam Load (0.000505)[0m   [0mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+Rendering baseball/show_team_cached
+  [4;36;1mPlayer Load (0.000703)[0m   [0;1mSELECT players.* FROM players INNER JOIN contracts ON players.id = contracts.player_id WHERE ((contracts.team_id = 1)) [0m
+  [4;35;1mPlayer Columns (0.002214)[0m   [0mSHOW FIELDS FROM players[0m
+Completed in 0.07678 (13 reqs/sec) | Rendering: 0.01308 (17%) | DB: 0.00564 (7%) | 200 OK [http://localhost/baseball/show_team_cached/1]
+
+
+Processing BaseballController#show_team_cached (for 127.0.0.1 at 2007-10-26 13:48:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"show_team_cached", "id"=>"1", "controller"=>"baseball"}
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000087)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+  [4;36;1mTeam Columns (0.002082)[0m   [0;1mSHOW FIELDS FROM teams[0m
+  [4;35;1mTeam Load (0.000499)[0m   [0mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+Rendering baseball/show_team_cached
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+  [4;36;1mPlayer Load (0.000692)[0m   [0;1mSELECT players.* FROM players INNER JOIN contracts ON players.id = contracts.player_id WHERE ((contracts.team_id = 1)) [0m
+  [4;35;1mPlayer Columns (0.001642)[0m   [0mSHOW FIELDS FROM players[0m
+Cached fragment: localhost:3000/baseball/show_team_cached/1 (0.00002)
+Completed in 0.02443 (40 reqs/sec) | Rendering: 0.01267 (51%) | DB: 0.00517 (21%) | 200 OK [http://localhost/baseball/show_team_cached/1]
+# codecite nocache
+
+# codecite fragment
+Processing BaseballController#show_team_cached (for 127.0.0.1 at 2007-10-26 13:49:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"show_team_cached", "id"=>"1", "controller"=>"baseball"}
+  [4;36;1mSQL (0.000100)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000084)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+  [4;36;1mTeam Columns (0.002063)[0m   [0;1mSHOW FIELDS FROM teams[0m
+  [4;35;1mTeam Load (0.000558)[0m   [0mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+Rendering baseball/show_team_cached
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+  [4;36;1mPlayer Load (0.000742)[0m   [0;1mSELECT players.* FROM players INNER JOIN contracts ON players.id = contracts.player_id WHERE ((contracts.team_id = 1)) [0m
+  [4;35;1mPlayer Columns (0.001458)[0m   [0mSHOW FIELDS FROM players[0m
+Cached fragment: localhost:3000/baseball/show_team_cached/1 (0.00002)
+Completed in 0.02462 (40 reqs/sec) | Rendering: 0.01339 (54%) | DB: 0.00500 (20%) | 200 OK [http://localhost/baseball/show_team_cached/1]
+
+
+Processing BaseballController#show_team_cached (for 127.0.0.1 at 2007-10-26 13:49:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"show_team_cached", "id"=>"1", "controller"=>"baseball"}
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+Rendering baseball/show_team_cached
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+Completed in 0.00235 (425 reqs/sec) | Rendering: 0.00077 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/baseball/show_team_cached/1]
+
+
+Processing BaseballController#show_team_cached (for 127.0.0.1 at 2007-10-26 13:49:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"show_team_cached", "id"=>"1", "controller"=>"baseball"}
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00007)
+Rendering baseball/show_team_cached
+Fragment read: localhost:3000/baseball/show_team_cached/1 (0.00002)
+Completed in 0.00263 (380 reqs/sec) | Rendering: 0.00074 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/baseball/show_team_cached/1]
+# codecite fragment
+
+# codecite query cache
+Processing BaseballController#modify_team (for 127.0.0.1 at 2007-10-26 14:43:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--2f18f5b4601093f9163734981d5905979f0347b9
+  Parameters: {"action"=>"modify_team", "id"=>"1", "controller"=>"baseball"}
+  [4;35;1mTeam Columns (0.002146)[0m   [0mSHOW FIELDS FROM teams[0m
+  [4;36;1mTeam Load (0.000697)[0m   [0;1mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mTeam Update (0.000275)[0m   [0mUPDATE teams SET `created_at` = '2007-10-23 11:28:33', `city` = 'Boston', `updated_at` = '2007-10-26 14:43:41', `name` = 'New Name' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000337)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTeam Load (0.000262)[0m   [0mSELECT * FROM teams WHERE (teams.`id` = 1) [0m
+Rendering baseball/modify_team
+Completed in 0.01346 (74 reqs/sec) | Rendering: 0.00101 (7%) | DB: 0.00384 (28%) | 200 OK [http://localhost/baseball/modify_team/1]
+# codecite query cache
