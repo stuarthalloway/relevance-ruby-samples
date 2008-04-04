@@ -1,0 +1,58 @@
+* codecite get *
+************************************************************************    
+get /quotes.xml    
+************************************************************************
+<?xml version="1.0" encoding="UTF-8"?>
+<quotes type="array">
+  <quote>
+    <body>JRuby has the elegance of Java, and the speed of Ruby</body>
+    <created-at type="datetime">2007-10-31T13:40:14-04:00</created-at>
+    <id type="integer">1</id>
+    <source>Justin Gehtland</source>
+    <updated-at type="datetime">2007-10-31T13:40:14-04:00</updated-at>
+  </quote>
+</quotes>
+************************************************************************    
+* codecite get *
+    
+* codecite post *
+************************************************************************    
+post /quotes.xml    
+<?xml version="1.0" encoding="UTF-8"?>
+<quote>
+  <body>If you can&#8217;t test it, then it&#8217;s not a beautiful design.</body>
+  <source>David C</source>
+</quote>
+************************************************************************
+<?xml version="1.0" encoding="UTF-8"?>
+<quote>
+  <body>If you can&#8217;t test it, then it&#8217;s not a beautiful design.</body>
+  <created-at type="datetime">2007-10-31T14:35:46-04:00</created-at>
+  <id type="integer">13</id>
+  <source>David C</source>
+  <updated-at type="datetime">2007-10-31T14:35:46-04:00</updated-at>
+</quote>
+************************************************************************    
+* codecite post *
+
+* codecite put *
+************************************************************************    
+put /quotes/13.xml    
+<?xml version="1.0" encoding="UTF-8"?>
+<quote>
+  <updated-at type="datetime">2007-10-31T18:35:46Z</updated-at>
+  <body>If you can&#8217;t test it, then it&#8217;s not a beautiful design.</body>
+  <id type="integer">13</id>
+  <source>David Chelimsky</source>
+  <created-at type="datetime">2007-10-31T18:35:46Z</created-at>
+</quote>
+************************************************************************     
+************************************************************************    
+* codecite put *
+
+* codecite delete *
+************************************************************************    
+delete /quotes/13.xml    
+************************************************************************
+************************************************************************
+* codecite delete *
